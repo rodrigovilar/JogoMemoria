@@ -1,5 +1,5 @@
 
 public class Carta {
-	//Teste
+	private String carta;
 
 }
