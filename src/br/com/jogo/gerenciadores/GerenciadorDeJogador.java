@@ -11,41 +11,41 @@ public class GerenciadorDeJogador {
 	// Lista de jogadores
 	private List<Jogador> jogadores;
 
-	// construtor inicializando a lista de jogadores
+	// Construtor inicializando a lista de jogadores
 	/**
 	 * Construtor do Gerenciador de Jogadores, inicializando a lista de
-	 * Jogadores
+	 * Jogadores.
 	 */
 	public GerenciadorDeJogador() {
 		this.jogadores = new ArrayList<Jogador>();
 	}
 
 	/**
-	 * Adiciona um jogador passado por parâmetro na lista de jogadores
+	 * Adiciona um jogador passado por parâmetro na lista de jogadores.
 	 * 
 	 * @param jogador
 	 *            Jogador a ser adicionado
 	 */
-	public void adicionarJogador(Jogador jogador) { // assinatura do metodo
+	public void adicionarJogador(Jogador jogador) { // Assinatura do método
 		this.jogadores.add(jogador);
 	}
 
 	/**
-	 * Remove um determinado jogador passado por parâmetro da lista de jogadores
+	 * Remove um determinado jogador passado por parâmetro da lista de jogadores.
 	 * 
 	 * @param jogador
 	 *            Jogador a ser removido
 	 */
-	public void removerJogador(Jogador jogador) { // assinatura do metodo
+	public void removerJogador(Jogador jogador) { // Assinatura do método
 		this.jogadores.remove(jogador);
 	}
 
-	// metodo retorna o lider do metodo
+	// Método que retorna o líder.
 	/**
 	 * Método que percorre a lista de jogadores para encontrar o jogador com
-	 * maior pontuação
+	 * maior pontuação.
 	 * 
-	 * @return O jogador com maior pontuação
+	 * @return O jogador com maior pontuação.
 	 */
 	public Jogador liderDoRankig() { // for de todos os jogadores
 		Jogador aux = null;
@@ -55,7 +55,7 @@ public class GerenciadorDeJogador {
 				aux = j;
 			}
 
-			// comparando que tem a pontuacao maior
+			// Comparando quem possui a pontuacao maior.
 			if (j.getPontuacao() >= aux.getPontuacao()) {
 				aux = j;
 			}
@@ -66,7 +66,7 @@ public class GerenciadorDeJogador {
 
 	/**
 	 * Método para pesquisar um jogador que recebe o nome do jogador a ser
-	 * pesquisado por parâmetro
+	 * pesquisado por parâmetro.
 	 * 
 	 * @param nome
 	 *            Nome do jogador a ser pesquisado
@@ -78,14 +78,17 @@ public class GerenciadorDeJogador {
 	public Jogador pesquisarJogadorNome(String nome)
 			throws JogadorInvalidoException {
 
-		// varrendo a lista e ver qual o jogador que tem o mesmo nome que o nome
-		// passado por parametro
+		/*
+		 * varrendo a lista e ver qual o jogador que tem o mesmo nome que o nome
+		 * passado por parâmetro.
+		 */
+
 		for (Jogador j : jogadores) { //
 			if (j.getNome().equals(nome)) {
 				return j;
 			}
 		}
-		// quando nao achar o jogador lanca a excecao
+		// Quando não encontrar o jogador lanca a excecão.
 		throw new JogadorInvalidoException("Jogador " + nome + " invalido!");
 	}
 }
