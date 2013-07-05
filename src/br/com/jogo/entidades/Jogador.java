@@ -55,7 +55,7 @@ public class Jogador {
 	}
 
 	/**
-	 * Serve para retornar informações da classe
+	 * Serve para retornar informações da classe em forma de String
 	 * 
 	 * @return retorna uma string contendo as informações da classe
 	 */
