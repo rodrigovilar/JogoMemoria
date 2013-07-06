@@ -8,10 +8,9 @@ import br.com.jogo.excecoes.JogadorInvalidoException;
 
 public class GerenciadorDeJogador {
 
-	// Lista de jogadores
+	
 	private List<Jogador> jogadores;
 
-	// Construtor inicializando a lista de jogadores
 	/**
 	 * Construtor do Gerenciador de Jogadores, inicializando a lista de
 	 * Jogadores.
@@ -26,28 +25,29 @@ public class GerenciadorDeJogador {
 	 * @param jogador
 	 *            Jogador a ser adicionado
 	 */
-	public void adicionarJogador(Jogador jogador) { // Assinatura do método
+	public void adicionarJogador(Jogador jogador) { 
 		this.jogadores.add(jogador);
 	}
 
 	/**
-	 * Remove um determinado jogador passado por parâmetro da lista de jogadores.
+	 * Remove um determinado jogador passado por parâmetro da lista de
+	 * jogadores.
 	 * 
 	 * @param jogador
 	 *            Jogador a ser removido
 	 */
-	public void removerJogador(Jogador jogador) { // Assinatura do método
+	public void removerJogador(Jogador jogador) { 
 		this.jogadores.remove(jogador);
 	}
 
-	// Método que retorna o líder.
+	
 	/**
 	 * Método que percorre a lista de jogadores para encontrar o jogador com
 	 * maior pontuação.
 	 * 
 	 * @return O jogador com maior pontuação.
 	 */
-	public Jogador liderDoRankig() { // for de todos os jogadores
+	public Jogador liderDoRankig() { 
 		Jogador aux = null;
 
 		for (Jogador j : jogadores) {
@@ -55,7 +55,6 @@ public class GerenciadorDeJogador {
 				aux = j;
 			}
 
-			// Comparando quem possui a pontuacao maior.
 			if (j.getPontuacao() >= aux.getPontuacao()) {
 				aux = j;
 			}
@@ -78,17 +77,12 @@ public class GerenciadorDeJogador {
 	public Jogador pesquisarJogadorNome(String nome)
 			throws JogadorInvalidoException {
 
-		/*
-		 * varrendo a lista e ver qual o jogador que tem o mesmo nome que o nome
-		 * passado por parâmetro.
-		 */
-
-		for (Jogador j : jogadores) { //
-			if (j.getNome().equals(nome)) {
-				return j;
+		for (Jogador jogador : jogadores) { //
+			if (jogador.getNome().equals(nome)) {
+				return jogador;
 			}
 		}
-		// Quando não encontrar o jogador lanca a excecão.
+		
 		throw new JogadorInvalidoException("Jogador " + nome + " invalido!");
 	}
 }
