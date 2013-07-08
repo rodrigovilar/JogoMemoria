@@ -1,7 +1,7 @@
 package br.com.jogo.entidades;
 
 public class Carta {
-	private String iconPath;
+
 	private int codigo;
 	private boolean virada = true;
 	private String historia;
@@ -49,10 +49,7 @@ public class Carta {
 
 	public String toString() {
 		return "Codigo:" + this.codigo + "\n historia";
-	}
-	
 
-    String getIconPath() {
-        return this.iconPath;
-    }
+	}
+
 }
