@@ -7,7 +7,7 @@ import br.com.jogo.excecoes.JogadorInvalidoException;
 import br.com.jogo.excecoes.JogadorNaoSelecionadoException;
 import br.com.jogo.excecoes.JogoNaoFinalizadoException;
 import br.com.jogo.excecoes.PosicaoInvalidaException;
-import br.com.jogo.gerenciadores.GerenciadorDeJogador;
+import br.com.jogo.gerenciador.GerenciadorDeJogador;
 
 public class JogoMemoriaFachada {
 
