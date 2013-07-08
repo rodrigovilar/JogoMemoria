@@ -100,7 +100,7 @@ public class GerenciadorDeJogador {
 		int controle = 0;
 		int jogadorAtual = 1;
 		String carta = null;
-			if (controle == 0) {
+		if (controle == 0) {
 			carta = this.tab.desvirarCarta(pos);
 			++controle;
 		} else {
