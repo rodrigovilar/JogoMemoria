@@ -9,7 +9,7 @@ import br.com.jogo.entidades.PosicaoCarta;
 
 public class Tabuleiro {
 
-	
+	//Teste
 	private Carta[][] tabuleiro; 
 	
         private PosicaoCarta pc1 = null;
