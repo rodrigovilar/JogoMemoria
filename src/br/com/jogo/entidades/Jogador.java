@@ -1,23 +1,19 @@
 package br.com.jogo.entidades;
 
-public class Jogador {
-
+public class Jogador implements Comparable<Jogador> {
 	private String nome;
 	private int pontuacao;
-	private int raking;
 
 	public Jogador() {
-		this("", 0, 0);
+		this("Desconhecido");
 	}
 
-	public Jogador(String nome, int pontuacao, int raking) {
+	public Jogador(String nome) {
 		this.nome = nome;
-		this.pontuacao = pontuacao;
-		this.raking = raking;
 	}
 
 	public String getNome() {
-		return this.nome;
+		return nome;
 	}
 
 	public void setNome(String nome) {
@@ -25,23 +21,19 @@ public class Jogador {
 	}
 
 	public int getPontuacao() {
-		return this.pontuacao;
+		return pontuacao;
 	}
 
 	public void setPontuacao(int pontuacao) {
 		this.pontuacao = pontuacao;
 	}
 
-	public int getRaking() {
-		return this.raking;
-	}
-
-	public void setRaking(int raking) {
-		this.raking = raking;
-	}
-
-	public String toString() {
-		return "Nome: " + this.nome + "\nPontuação: " + this.pontuacao
-				+ "\nRankig: " + this.raking;
+	@Override
+	public int compareTo(Jogador o) {
+		if (o.getPontuacao() > pontuacao)
+			return 1;
+		else if (o.getPontuacao() < pontuacao)
+			return -1;
+		return -o.getNome().compareTo(nome);
 	}
 }
